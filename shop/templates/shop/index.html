@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <style>
+        a {
+        text-decoration: none;
+        color: white;
+        font-size:20px
+        
+    }
+</style>
+<style>    
+*{ margin:0; padding:0; list-style:none;}    
+#box{ width:1000px; border:1px solid #000; height:160px; margin:30px auto; position:relative; overflow:hidden;}    
+#box ul{ position:absolute; left:0; top:0;}    
+#box ul li{ width:1000px; height:200px; float:left; padding:5px;}    
+</style>    
+<script>    
+window.onload=function(){    
+    var oBox=document.getElementById('box');    
+    var oUl=oBox.children[0];    
+    var aLi=oUl.children;    
+         
+    <!--复制一份内容 ，制作出无缝的效果   -->
+    oUl.innerHTML+=oUl.innerHTML;    
+    oUl.style.width=aLi.length*aLi[0].offsetWidth+'px';    
+         
+    setInterval(function(){   <!--开定时器，这样就可以自己切换，无需人工干预。 -->
+        var l=oUl.offsetLeft-10; <!-- 图片切换，就是移动距离-->
+        if(l<=-oUl.offsetWidth/2){    
+            l=0;    
+        }    
+        oUl.style.left=l+'px';    
+    },150);    
+};    
+</script>    
+</head>
+<body>
+      <div id="header" style="TEXT-ALIGN: center;background-color:black">
+      <h1 style="color:white">超码</h1>
+      </div>
+     <a href="{% url "shop:market" %}">个人中心</a>
+     <a href="{% url "shop:product2_list" %}">我的超市</a>
+
+    <div class="user"style="TEXT-ALIGN: right">
+                    <a href="{% url "shop:xxx" %}">
+     <img src="media/img/位置.png" width="40">
+     </a>
+        {% if request.user.is_authenticated %}
+        Hello{{ request.user.first_name }},{{ request.user.username }},<a href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a href="{% url 'login' %}">Log-in</a>
+        {% endif %}
+    </div> <hr />
+<div id="box">    
+    <ul>    
+     <li><img src="media/img/1.jpg" width="1000"></li>    
+       <li><img src="media/img/2.jpg" width="1000"></li>    
+       <li><img src="media/img/3.jpg" width="1000"></li>    
+       <li><img src="media/img/4.jpg" width="1000"></li>      
+   </ul>    
+</div>
+    <div id="show" style="TEXT-ALIGN: center">
+     <img src="media/img/a.jpg" width="250">
+     <img src="media/img/b.jpg" width="250">
+     <img src="media/img/c.jpg" width="250">
+     <img src="media/img/d.jpg" width="250">
+     </div>
+    <div id="show2" style="TEXT-ALIGN: center">
+     <img src="media/img/e.jpg" width="250">
+     <img src="media/img/f.jpg" width="250">
+     <img src="media/img/g.jpg" width="250">
+     <img src="media/img/h.jpg" width="250">
+     </div>
+     <div id="shop" style="TEXT-ALIGN: center;background-color:red;height:500px">
+     <div class="sort">
+     <a href="{{a.html}}">综合排序</a>
+     <a href="{{b.html}}">距离最近</a>
+     <a href="{{c.html}}">买过的店</a>
+     </div>
+     <br>
+    <a href="{% url "shop:product_list" %}">
+     <img src="media/img/s5.png" width="482">
+     </a>
+     <img src="media/img/s6.png" width="482">
+     <br>
+     <img src="media/img/s7.png" width="482">
+     <img src="media/img/s8.png" width="482">
+     
+      {% for market in markets %}
+                <div class="item">
+                    <a href="{{ market.get_absolute_url }}">
+                        <img style="width:100%;"src="
+                                {% if market.image %}{{ market.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+                    </a>
+                     <br>
+                    <a id="marName" href="{{ market.get_absolute_url }}">{{ market.name }}</a>
+                    <br>
+                </div>
+            {% endfor %}
+     </div>
+     
+    <div id="footer">
+     Copyright © UNTITLED
+     </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<style>
+
+
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#sidebar {
+    line-height:30px;
+    background-color:rgb(200,200,200);
+    height:1000px;
+    width:125px;
+    left=0；
+    padding:5px;	 
+    position:absolute	
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+
+</style>

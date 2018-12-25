@@ -1,0 +1,284 @@
+{%load static%}
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    .header{
+    width: 1666px;
+    height: 120px;
+    background-color:#FFFFFF	;
+    z-index:-2;
+    position:absolute;
+    }
+    img.hh1{
+    position:absolute;
+    left:475px;
+    top:-40px;
+    }
+    h1.hh2{
+    font-size:40px;
+    position:absolute;
+    left:509px;
+    top:-10px;
+    color:#FF3333;
+    }
+    <!--img.i1{
+        position:absolute;
+	    left:345px;
+	    top:-20px;
+        }-->
+    a.a1{
+    font-size:40px;
+    color:#FF3333;
+    position:absolute;
+	left:600px;
+	top:20px;
+	text-decoration:none
+    }
+   hr.hr1{
+   position:absolute;
+   left:166px;
+	top:98px;
+   }
+   hr.hr2{
+   position:absolute;
+   left:0px;
+	top:77px;
+   }
+   .bodyy{
+   width: 1000px;
+   height: 666px;
+   position:absolute;
+   left:400px;
+	top:121px;
+   }
+   .bo3{
+   width: 120px;
+   height: 500px;
+   position:absolute;
+   left:0px;
+	top:121px;
+   }
+   h1.hh3{
+   color:#4F4F4F;
+   }
+   a.aa{
+   font-size:20px;
+   color:#AD5A5A;
+   text-decoration:none;
+   }
+   .div1{
+   width: 888px;
+   height: 500px;
+   position:absolute;
+   left:166px;
+   top:121px;
+   }
+  .pg_body{
+            margin-top: -10px;
+            font-size: 18px;
+            display: inline-block;
+            width: 200px;
+        }
+        .pg_body .menu{
+            width: 800px;
+            padding: 15px;    
+            float: left;
+            font-weight: bold;
+        }
+        input[type="text"]{
+            width: 200px;
+            height: 25px;
+            border-radius: 6px;
+        }
+        input[type="password"]{
+            width: 200px;
+            height: 25px;
+            border-radius: 6px;
+        }
+        input[type="button"]{
+            background-color: #555555;
+               border: none;
+            color: white;
+            padding: 12px 29px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]{
+            background-color: #555555;
+               border: none;
+            color: white;
+            padding: 12px 29px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 17px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .kong{
+            margin-top: -54px;
+            margin-left: 200px;
+            float:left;
+            padding: 15px;
+        }
+        .can{
+            position:absolute;
+            left: -360px;
+            top:366px;
+            width: 1220px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 auto;
+            text-align: center;
+            display: inline-block;
+        }
+        .div2{
+       width: 888px;
+       height: 500px;
+       position:absolute;
+       left:166px;
+       top:121px;
+       }
+       .div3{
+       width: 888px;
+       height: 500px;
+       position:absolute;
+       left:166px;
+       top:121px;
+       }
+    </style>
+    <script>
+   function clicka1(){
+        document.getElementById("div22").style.display = "none";//隐藏
+        document.getElementById("div33").style.display = "none";//隐藏
+        document.getElementById("div11").style.display = "block";//显示
+    }
+    function clicka2(){
+        document.getElementById("div11").style.display = "none";//隐藏
+        document.getElementById("div33").style.display = "none";//隐藏
+        document.getElementById("div22").style.display = "block";//显示
+    }
+    function clicka3(){
+        document.getElementById("div11").style.display = "none";//隐藏
+        document.getElementById("div22").style.display = "none";//隐藏
+        document.getElementById("div33").style.display = "block";//显示
+    }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <!--<img class="i1" src="{%static "/sign.jpg"%}" style="margin-left:-6%"  width="111" height="111" />-->
+        <img class="hh1" src="media/img/logo.png" style="margin-left:-6%"  width="111" height="111" />
+        <h1 class="hh2">|</h1>
+        <a class="a1" href="http://127.0.0.1:8000/login">首页</a>
+    </div>
+    <hr class="hr1" style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="80%" color=#FFDCB9 SIZE=3>
+    <div class="bodyy">
+        <h1 class="hh3">个人中心</h1>
+        <hr class="hr2" style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="12%" color=#FFDCB9 SIZE=3>
+        <div class ="bo3" style="border-right:2px solid red;">
+            <li><a class="aa" onclick="clicka1()">我的资料</a></li>
+            <br>
+            <li><a class="aa" onclick="clicka2()">我的超市</a></li>
+            <br>
+            <li><a class="aa" onclick="clicka3()">活动信息</a></li>
+        </div>
+        <div class="div1" id="div11">
+            <div class="pg_body">
+            
+                <div class="menu">用户名:
+                </div>
+                <div class="kong">
+                    <input id="text1" type="text" name="username" value={{i.username}}><span id="div11" class="tian" style="margin-top: 4px"><span>
+                </div>  
+                <div class="menu">性别:
+                </div>
+                <div class="kong" style="width:200px;">
+                {% if i.gender == 'M' %}
+                    男<input type="radio" name="sex" value="1" checked>
+                    女 <input type="radio" name="sex" value="2">
+                {% else %}
+                    男<input type="radio" name="sex" value="1">
+                    女 <input type="radio" name="sex" value="2" checked>
+                {% endif %}
+                </div>
+                <div class="menu">电话号码:
+                </div>
+                <div class="kong">
+                    <input id="i5" type="text" name="phonenumber" value={{i.phonenumber}}>
+                </div>
+                <div class="menu">邮箱地址:
+                </div>
+                <div class="kong">
+                    <input id="text4" type="text" name="01" value={{i.email}}>
+                    <span id="div4" class="tian"><span>
+                </div>
+                <div class="menu">头像:    
+                </div>
+                <div class="kong">
+                    <input type="file" name="file" value="选择头像" accept="image/*">
+                </div>        
+                <div class="menu">个人签名:
+                </div>
+                <div class="kong">
+                    <input name="meno" style="width: 280px;height: 40px;" value={{i.signature}}>
+                    </input>
+                </div>
+                <div class="can">
+                    <input id="i111" type="submit" name="002" value="保 存">
+                    <input id="i222" type="button" name="004" value="取  消">
+                </div>
+            </div>
+        </div>
+        <div class="div2" id="div22" style="display: none;">
+            <div class="pg_body">
+                <div class="menu">超市名:
+                </div>
+                <div class="kong">
+                    <input id="text1" type="text" name="username" value={{j.marketname}}><span id="div12" class="tian" style="margin-top: 4px"><span>
+                </div>
+                <div class="menu">超市图片: 
+                </div>
+                <div class="kong">
+                    <br>
+                    <input type="file" name="file" value="选择头像" accept="image/*">
+                </div> 
+                <div class="can">
+                    <input id="i111" type="submit" name="002" value="保 存">
+                    <input id="i222" type="button" name="004" value="取  消">
+                </div>       
+            </div>
+        </div>
+        <div class="div3" id="div33" style="display: none;">
+            <div class="pg_body">
+                <div class="menu">活动信息:
+                </div>
+                <div class="kong">
+                    <input id="text1" type="text" name="username" value={{j.activityTXT}}><span id="div13" class="tian" style="margin-top: 4px"><span>
+                </div>
+                <div class="menu">
+                <br>
+                <br>
+                折扣信息:
+                </div>
+                <div class="kong">
+                    <input id="text1" type="text" name="username" value={{j.countTXT}}><span id="div13" class="tian" style="margin-top: 4px"><span>
+                </div>
+                <div class="can">
+                    <input id="i111" type="submit" name="002" value="保 存">
+                    <input id="i222" type="button" name="004" value="取  消">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
