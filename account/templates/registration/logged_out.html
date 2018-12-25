@@ -1,10 +1,6 @@
-{% extends 'base.html' %}
-
-{% block title %}
-Logged out
-{% endblock %}
-
+<link rel="stylesheet" href="/static/log.css" />
 {% block content %}
-<h1>Logged out</h1>
-    <p>You have been successfully logged out. You can <a href="{% url 'login' %}">log-in again</a>.</p>
+<h1>超码</h1>
+<h2>成功登出</h2>
+    <p id="log-out">你已成功登出. 你可以 <a href="{% url 'login' %}">点击此处重新登陆</a>.</p>
 {% endblock %}

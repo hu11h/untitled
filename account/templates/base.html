@@ -1,17 +1,20 @@
 {% load staticfiles %}
+<link rel="stylesheet" href="/static/log.css" />
 <!DOCTYPE html>
 <html>
 <head>
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="/static/css/base.css" />
 </head>
 <body >
+     <div id="header"">
+      <h1>超码</h1>
+      </div>
       
     <div class="user" style="TEXT-ALIGN: right">
         {% if request.user.is_authenticated %}
-        Hello {{ request.user.first_name }},{{ request.user.username }},<a href="{% url 'logout' %}">Logout</a>
+        你好 {{ request.user.first_name }},{{ request.user.username }},<a href="{% url 'logout' %}">退出</a>
             {% else %}
-            <a href="{% url 'login' %}">Log-in</a>
+            <a href="{% url 'login' %}">登陆</a>
         {% endif %}
     </div><hr />
     <div id="content">

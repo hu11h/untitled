@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Category, Product,market
+from .models import Category, Product
 from django.contrib.auth.decorators import login_required
 
 @login_required
@@ -74,3 +74,8 @@ def product2_list(request, category_slug=None):
         products = products.filter(category=category)
     return render(request, 'shop/product/list2.html',
                   {'category': category, 'categories': categories, 'products': products})
+
+@login_required
+def product2_detail(request, id, slug):
+    product = get_object_or_404(Product, id=id, slug=slug)
+    return render(request, 'shop/product/detail2.html', {'product': product})

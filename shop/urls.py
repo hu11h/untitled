@@ -25,7 +25,9 @@ urlpatterns = [
     path('10', views.m10, name='10'),
     path('shop', views.product_list, name='product_list'),
     path('<slug:category_slug>/', views.product_list, name='product_list_by_category'),
+    path('d/<int:id>/<slug:slug>/', views.product2_detail, name='product2_detail'),
     path('<int:id>/<slug:slug>/', views.product_detail, name='product_detail'),
+    
     re_path(r'^media/(?P<path>.*)$', serve, {"document_root": settings.MEDIA_ROOT}),
 ]
 if settings.DEBUG:

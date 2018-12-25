@@ -1,4 +1,5 @@
 {%load static%}
+<link rel="stylesheet" href="/static/log.css" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,106 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>登录</title>
     <style>
-        body{
-            background-color:#FFFFFF;
-            font-size: 16px;
-        }
-        p.pp1{
-          font-size:26px;
-          position:fixed;
-          left:500px;
-          top:20px;
-        }
-        .main{
+          .main{
             background:url("media/img/market2.jpg") no-repeat;
             background-size:100% 100%;
             -moz-background-size:100% 100%;
-            position:fixed;
-            left:0px;
-	        top:66px;
-            width: 1879px;
-            height: 555px;
-            margin: 50px auto;
-            border:1px solid rgb(203, 219,218);
-            background-color:#FFFFFF;
-            z-index:-2;
-        }
-        <!--img.i2
-        {
-            width:500;
-            height:500;
-	        position:fixed;
-	         left:0px;
-	        top:66px;
-	        border-radius: 8px;
-	         z-index:-1;
-        }-->
-        img.i1{
-            position:fixed;
-	        left:450px;
-	        top:0px;
-        }
-        .login{
-            position:fixed;
-            left: 75%;
-	        top:188px;
-            width: 340px;
-            height: 280px;
-            margin: 50px auto;
-            border:1px solid rgb(203, 219,218);
-        }
-        .login form{
-            width: 340px;
-            background-color: rgb(254,254,254);
-        }
-        .login .forms{
-            width: 300px;
-            margin: 0 auto;
-            padding:10px 0 20px 0;
-        }
-        .login label{
-            display: inline-block;
-            width: 300px;
-            padding-bottom: 8px;
-        }
-        .login input{
-            width: 300px;
-            height: 35px;
-            border:none;
-            outline: none;
-            border:1px solid rgb(203, 219,218);
-            background-color: #fff; 
-            font-size: 18px;
-            text-indent: 6px;
-            border-radius: 5px;
-        }
-        .btn{
-            width: 340px;
-            padding: 15px 0;
-            border-top: 1px solid #ccc;
-            background-color:rgb(240,245,248);
-        }
-        .btn div{
-            overflow: hidden;
-            width: 300px;
-            margin: 0 auto;
-        }
-        .btn button{
-            float:right;
-            padding:8px 16px;
-            background: rgb(157, 211, 239);
-            border:1px solid #ccc;
-            border-radius: 5px;
-            color: #fff;
-        }
-        .btn a{
-            float:left;
-            padding: 5px 0;
-            text-decoration: none;
-            color:#ccc;
-        }
-        #a2{
-        margin-left:16%;
         }
     </style>
 </head>
@@ -114,8 +19,11 @@
 	超市信息 — 欢迎登陆
 </title>
 <body>
-    <img class="i1" src="media/img/logo.png" style="margin-left:-6%"  width="111" height="111" />
-    <p class="pp1">欢迎登录</p>
+  <div class = "pg_header">
+        <!--<a class = "logo">LOGO</a>-->
+        <img class="i1" src="media/img/logo.png"  />
+        <a class="pg_dl" id="i77">欢迎登录</a>
+    </div>
     <div class="main">
     <div class="login">
     <!--<img class="i2" src="{%static "/market2.jpg"%}" width="500" height="500" />-->

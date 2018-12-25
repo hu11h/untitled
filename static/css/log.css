@@ -1,0 +1,122 @@
+h1, h2, h3, h4, h5 , h6 {
+    font-family: '微软雅黑', sans-serif; font-weight:normal;
+}
+
+h1{
+    height:150px;
+    overflow:auto;
+    padding:30px 0 10px 50px;
+    background:#CE0614;
+    color:#fff;
+    font-weight:bold;
+    font-size: 45px
+}
+h2{
+    padding-left: 100px;
+}
+ .pg_header{
+            height: 100px;
+            line-height: 48px;
+            background: #CE0614;
+        }
+      .hh{
+            margin: 40px auto;
+        }
+        .pg_header .logo{
+            line-height: 48px;
+        }
+        img.i1{
+            padding-bottom: 3px;
+            background: #fff;
+            margin: 8px 50px 50px 80px;
+            border-style: double;
+            border-width:8px;
+            border-color: #CE0614;
+        }
+        .pg_dl{
+            font-size:40px;
+            position:absolute;
+            left: 380px;
+            top:30px;
+            display: inline-block;
+            padding: 0 40px;
+            color:#F5F5F5;
+            font-weight: bold;
+        }
+        .pg_header .pg_dl:hover{
+            cursor: pointer;
+        }
+
+        body{
+            background-color:#FFFFFF;
+            font-size: 16px;
+                    }
+        p[id='log-out']{
+        padding-left:100px; 
+        }
+        .main{
+            height:70%;
+            margin: 50px auto;
+            background-color:#FFFFFF;
+        }
+        img.i1{
+            left:450px;
+            top:0px;
+        }
+        .login{
+            left: 75%;
+            top:200px;
+            width: 340px;
+            height: 290px;
+            padding: 50px 70px;
+            float:right;
+        }
+        .login p{
+            padding: 10px 15px 0 15px;
+        }
+        .login form{
+            background-color: rgb(254,254,254);
+        }
+        .login .forms{
+            margin: 0 auto;
+        }
+        .login label{
+            display: inline-block;
+            width: 300px;
+            padding-bottom: 8px;
+        }
+        .login input{
+            width: 300px;
+            height: 35px;
+            border:none;
+            background-color: #fff; 
+            font-size: 18px;
+            text-indent: 6px;
+            border-radius: 5px;
+        }
+        .btn{
+            width: 340px;
+            padding: 15px  0 15px ;
+            background-color:rgb(240,245,248);
+            text-align: right;
+        }
+        .btn div{
+            overflow: hidden;
+            width: 300px;
+            margin: 0 auto;
+        }
+        .btn button{
+            padding:8px 16px;
+            background:#CE0614;
+            border:1px solid #ccc;
+            border-radius: 5px;
+            color: #fff;
+        }
+        .btn a{
+            float:left;
+            padding: 5px 0;
+            color:#696969;
+        }
+        #a2{
+        margin-left:16%;
+        }}

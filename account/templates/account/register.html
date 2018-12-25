@@ -1,150 +1,17 @@
 {%load static%}
+    <link rel="stylesheet" href="/static/reg.css" />
 <!DOCTYPE html>
 <html>
 <head>
     <title>注册页面</title>
 <style>
-        .pg_header{
-            position: fixed;
-            height: 48px;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: #FFFFFF; 
-            line-height: 48px;
-        }
-        .hh{
-            width: 1879px;
-            height: 555px;
-            position:fixed;
-            left:0px;
-	        top:60px;
-            margin: 50px auto;
-            border:1px solid rgb(203, 219,218);
-        }
-        <!--.pg_header .logo{
-            margin: 0 auto;
-            float: left;
-            width: 200px;
-            text-align: center;
-            line-height: 48px;
-            font-size: 28px;
-            color: white;
-        }-->
-        .pg_header h1
-        {
-            font-size:40px;
-            position:fixed;
-            left:366px;
-            top:-20px;
-            color:#FF3333;
-	        text-shadow: 5px 5px 5px #FFB3FF;
-        }
-        img.i1{
-            position:fixed;
-	        left:27%;
-	        top:-15px;
-        }
-        .pg_dl{
-            font-size:30px;
-            position:absolute;
-            left: 455px;
-            top:6px;
-            display: inline-block;
-            padding: 0 40px;
-            color:rgb(206, 7, 20);
-        }
-        .pg_header .pg_dl:hover{
-            cursor: pointer;
-        }
-        .left{
-            margin-top: 20px;
-            width: 400px;
-            display: inline-block;
-            float: left;        
-        }
-        .pg_body{
-            margin-top: 15px;
-            font-size: 18px;
-            display: inline-block;
-            width: 200px;
-        }
-        .pg_body .menu{
-            width: 800px;
-            padding: 15px;    
-            float: left;
-            font-weight: bold;
-        }
-        input[type="text"]{
-            width: 200px;
-            height: 25px;
-            border-radius: 6px;
-        }
-        input[type="password"]{
-            width: 200px;
-            height: 25px;
-            border-radius: 6px;
-        }
-        input[type="button"]{
-            background-color: #555555;
-               border: none;
-            color: white;
-            padding: 12px 29px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 17px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        input[type="submit"]{
-            background-color: #555555;
-               border: none;
-            color: white;
-            padding: 12px 29px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 17px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        .kong{
-            margin-top: -54px;
-            margin-left: 200px;
-            float:left;
-            padding: 15px;
-        }
-        .img{
-            width: 50px;
-            height: 40px;
-        }
-        .can{
-            position:absolute;
-            left: 235px;
-            top:466px;
-            width: 1220px;
-            height: 40px;
-            line-height: 40px;
-            margin: 0 auto;
-            text-align: center;
-            display: inline-block;
-        }
-        .tian{
-            color: red;
-            float: right;
-            font-size: 12px;
-            margin-right: -120px;
-            margin-top: -25px;
-        }
+
     </style>
 </head>
-<body id="i88" style="margin: 0">
+<body id="i88"">
     <div class = "pg_header">
         <!--<a class = "logo">LOGO</a>-->
-        <img class="i1" src="media/img/logo.png" style="margin-left:-6%"  width="111" height="111" />
+        <img class="i1" src="media/img/logo.png"  />
         <a class="pg_dl" id="i77">注册</a>    
     </div>
     <form name="tijiao" method="post" onsubmit="return check()" action="winford.top">
@@ -185,20 +52,26 @@
                 <!--</div>-->        
                 <div class="menu">个人签名:</div>
                 <div class="kong">
-                    <textarea name="meno" style="width: 280px;height: 40px;">
+                    <textarea name="meno" style="width: 250px;height: 140px;">
                     </textarea>
                 </div>
         </div>
         <div class="can">
+        <hr>
         <input id="i111" type="submit" name="002" value="返  回" onclick="javascript:history.back();">
-            <p style="width: 200px;display: inline-block;"></p>
+            <p style="width: 100px;display: inline-block;"></p>
             <input id="i111" type="submit" name="002" value="注  册">
-            <p style="width: 200px;display: inline-block;"></p>
+            <p style="width: 200px;"></p>
             <!--<input id="i222" type="button" name="004" value="取  消">-->
 
         </div>
     </div>
     </form>
+
+    <br><br>
+    <div id="footer">
+     Copyright © UNTITLED
+     </div>
     <script type="text/javascript">
             //刷新or取消
             document.getElementById('i77').onclick = function(){

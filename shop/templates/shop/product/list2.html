@@ -22,16 +22,16 @@
             </ul>
         </div>
         <div id="main" class="product-list" style="margin-left:10%;">
-            <h2 style="margin-left: 3%;">{% if category %}{{ category.name }}{% else %}Products
+            <h2 >{% if category %}{{ category.name }}{% else %}Products
             {% endif %}</h2>
             {% for product in products %}
                 <div class="item">
-                    <a href="{{ product.get_absolute_url }}">
-                        <img style="width:100%;"src="
+                    <a href="{{ product.get_absolute_url2 }}">
+                        <img src="
                                 {% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
                     </a>
                      <br>
-                    <a id="proName" href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+                    <a id="proName" href="{{ product.get_absolute_url2 }}">{{ product.name }}</a>
                     <br>
                     ${{ product.price }}
                 </div>
